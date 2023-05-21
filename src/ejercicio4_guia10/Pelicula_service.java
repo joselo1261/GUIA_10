@@ -8,6 +8,7 @@ import ejercicio4_guia10.Pelicula;
     // Crear Peliculas
     public class Pelicula_service {
     Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");
+    
     public void crearPelicula(ArrayList<Pelicula> movie) {
         
         boolean salir = true;
@@ -42,7 +43,7 @@ import ejercicio4_guia10.Pelicula;
     }
     
     
-    // Mostrar Peliculas con duracion mayor a la ingresad por el usuario en el main
+    // Mostrar Peliculas con duracion mayor a la ingresada por el usuario en el main
     public void segunDuracion(double dur,ArrayList<Pelicula> movie) {
         movie.forEach((aux) -> {
             if (aux.getDuracion() >= dur) {

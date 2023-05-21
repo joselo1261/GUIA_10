@@ -36,7 +36,7 @@ public class Pelicula_Main {
         ps.crearPelicula(movie);
         
         do {
-            System.out.println("\t--------------- MENU PELICULAS ---------------");
+            System.out.println("\t*-------------- MENU PELICULAS --------------*");
             System.out.println("1. Mostrar todas las Peliculas");
             System.out.println("2. Mostrar Peliculas con duracion mayor a => x: horas");
             System.out.println("3. Ordenar Peliculas de acuerdo a su Duracion (de mayor a menor)");
@@ -45,7 +45,7 @@ public class Pelicula_Main {
             System.out.println("6. Ordenar Peliculas por Director alfabeticamente");
             System.out.println("7. Limpiar Pantalla");
             System.out.println("8. Salir.");
-            System.out.println("-------------------------------------------------");
+            System.out.println("\t===============================================");
             System.out.print("Ingrese una Opción: ");
             int opc = sc.nextInt();
             switch (opc) {

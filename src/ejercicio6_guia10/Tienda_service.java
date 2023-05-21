@@ -4,6 +4,7 @@ package ejercicio6_guia10;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 
 public class Tienda_service {
@@ -15,7 +16,8 @@ public class Tienda_service {
     // eliminar un producto y mostrar los productos que tenemos con su precio (Utilizar
     // Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el precio.
     // Realizar un menú para lograr todas las acciones previamente mencionadas.
-    Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");    
+    Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");   
+    
     public void introducirProductos(HashMap<String,Double> productos) {
         
         boolean salir = true;
@@ -40,13 +42,17 @@ public class Tienda_service {
 
     }
     
+    // Imprime listado en forma ascendente
     public void mostrar (HashMap<String,Double> productos) {
-        
-        for (Map.Entry<String, Double> entry : productos.entrySet()) {
-            String nombre = entry.getKey();
-            double precio = entry.getValue();
-            System.out.println("Producto: " + nombre + ", Precio: " + precio); 
+        System.out.println("\t __ LISTA DE PRODUCTOS __");
+        TreeMap<String,Double> prod = new TreeMap(productos); //<= Creamos TreeMap que se ordena ascendente
+            
+        for (Map.Entry<String, Double> entry : prod.entrySet()) {
+        String nombre = entry.getKey();
+        double precio = entry.getValue();
+        System.out.println("Producto => " + nombre + " ; Precio => " + precio); 
         }
+        
     }
     
     public void modificarPrecio(HashMap<String,Double> productos) {
@@ -57,9 +63,9 @@ public class Tienda_service {
             System.out.println("Ingrese el nuevo precio: ");
             double precio = sc.nextDouble();
             productos.put(nombre,precio);
-            System.out.println("\nPrecio modificado correctamente.");
+            System.out.println("Precio modificado correctamente.");
         } else {
-            System.err.println("\nEl producto no existe.");
+            System.err.println("El producto no existe.");
         }
         
     }
@@ -72,7 +78,7 @@ public class Tienda_service {
             productos.remove(nombre);
             System.out.println("\nProducto eliminado correctamente\n");
         } else {
-            System.err.println("\nEl producto no existe \n");
+            System.err.println("\nEl producto no existe !!!! \n");
         }
 
     }
