@@ -27,7 +27,7 @@ public class Pelicula_Main {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");
-    Pelicula_service ps = new Pelicula_service();
+        Pelicula_service ps = new Pelicula_service();
         boolean salir = true;
         
         ArrayList<Pelicula> movie = new ArrayList();

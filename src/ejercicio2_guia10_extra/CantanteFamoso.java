@@ -27,8 +27,11 @@ public class CantanteFamoso {
     public void setDiscoConMasVentas(String discoConMasVentas) {
         this.discoConMasVentas = discoConMasVentas;
     }
+
+    @Override
+    public String toString() {
+        return "\n--------------------------------------" + "\n Cantante => " + nombre + "\n Disco con Mayor Ventas => " + discoConMasVentas + "\n--------------------------------------";
+    }
     
-      
-    
-    
+        
 }
