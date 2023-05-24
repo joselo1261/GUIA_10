@@ -1,12 +1,13 @@
 
 package ejercicio3_guia10_extra;
 
-import ejercicio3_guia10.Alumno;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 import java.util.TreeSet;
+
 
 public class Libreria_service {
     
@@ -42,7 +43,7 @@ public class Libreria_service {
     // Metodo Crear Libreria
     
         Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");
-    public void crearLibreria(HashSet<Libreria> libro){
+        public void crearLibreria(HashSet<Libreria> libro){
         String salir;
         
         do {
@@ -61,24 +62,25 @@ public class Libreria_service {
             } while (salir.equalsIgnoreCase("S"));
         }
         
-    
-    // Imprime Lista de Libros
-        public void imprimirLibros(HashSet<Libreria> libro){
-            //System.out.print("\nImprimir con TreeSet");
-            //TreeSet<Libreria> librot = new TreeSet(libro);
+        public void imprimirLibrosHash(HashSet<Libreria> libro){
+            System.out.println("\nImprimir el HashSet: ");
             for (Libreria l:libro){
             System.out.print(l);
             }
-            
-            //System.out.println("\nImprimir con ArrayList");
-            //ArrayList<Libreria> libroar = new ArrayList(libro);
-            //Collections.sort(libroar);
-            //for (Libreria lib:libroar){
-            //System.out.print(lib);
-            //}
+        }
+         
+        // Imprimir Ordenado se pasa el HashSet a un ArrayList
+        public void imprimirLibrosArray(HashSet<Libreria> libro){
+            System.out.println("\nImprimir con ArrayList (Ordenada) ");
+            List<Libreria> libroar = new ArrayList(libro);
+            Collections.sort(libroar,(Libreria a, Libreria b)-> a.getTitulo().compareToIgnoreCase(b.getTitulo()));
+            libroar.forEach((aux) -> {
+            System.out.println(aux);
+        });
+        
 }
         
-    // Metodo Prestamo
+        // Metodo Prestamo
         public boolean prestarLibro(HashSet<Libreria>libro,String titulo){
             for (Libreria lib: libro)  {
                 if(lib.getTitulo().equalsIgnoreCase(titulo) && (lib.getNumero_ejempl()>0) ){

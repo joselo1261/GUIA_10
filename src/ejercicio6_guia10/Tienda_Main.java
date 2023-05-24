@@ -37,9 +37,8 @@ public class Tienda_Main {
                     salir = false;
                     System.out.println(""); break;
                 default:
-                    System.err.println("Opcion Incorrecta !!! Vuelva a intentarlo");
-                    System.out.println("");
-                         
+                    System.err.println("\nOpcion Incorrecta !!! Vuelva a intentarlo");
+                                             
             } 
             
         } while (salir);

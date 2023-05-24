@@ -51,12 +51,8 @@ public class Libreria {
 
     @Override
     public String toString() {
-        return "\n-----------------------------------"+"\nTitulo => " + titulo + "\nAutor => " + autor +"\nCant. Ejemplares => "+ numero_ejempl + "\nCant. Ejemplares Prestados => "+numero_ejempl_prestados +"\n-----------------------------------";
+        return "\n-----------------------------------"+"\nTitulo => " + titulo + "\nAutor => " + autor +"\nCant. Ejemplares => "+ numero_ejempl + "\nCant. Ejemplares Prestados => "+numero_ejempl_prestados +"\n-----------------------------------\n";
     }
 
-    int setNumero_ejempl() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-        
+           
 }
