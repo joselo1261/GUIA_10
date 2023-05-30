@@ -23,49 +23,51 @@ public class CodigosPostales_service {
         
     // Mostrar listado en forma ascendente
     public void mostrarDatos(HashMap<Integer, String> codigopostal) {
-        System.out.println("\t __ CODIGO POSTAL / CIUDAD __");
+        System.out.print("\n\t __ CODIGO POSTAL / CIUDAD __");
         TreeMap<Integer, String> cpt = new TreeMap(codigopostal); //<= Creamos TreeMap que se ordena ascendente
             
         for (Map.Entry<Integer, String> entry : cpt.entrySet()) {
         int codigop = entry.getKey();
         String city = entry.getValue();
-        System.out.print("\nCodigo Postal => " + codigop + "\nCiudad => "+city+"\n"); 
+        System.out.print("\nCodigo Postal => " + codigop + "\nCiudad => "+city);
         }
-        
+        System.out.print("\n................................................");
 }
     
     
     // Buscar ciudad por código postal
     public void buscarCodigo(HashMap<Integer, String> codigopostal){
-      System.out.println("\nIngrese Codigo Postal para buscar Ciudad:");
+      System.out.print("\nIngrese Codigo Postal buscar Ciudad: ");
         int codigo = sc.nextInt();
         if (codigopostal.containsKey(codigo)) {
-            System.out.print("\nCiudad asociada: " + codigopostal.get(codigo)+"\n");
+            System.out.print("Ciudad asociada: " + codigopostal.get(codigo)+"\n");
         } else {
-            System.err.print("\nNo se encuentra asocidad al Codigo Postal");  
+            System.err.print("No se encuentra asociada a un Codigo Postal \n");
         }
+        System.out.print(" ");
 }
     
     
     public void agregarCodigo(HashMap<Integer, String> codigopostal){
-        System.out.println("Ingrese Codigo Postal: ");
+        System.out.print("\nIngrese Codigo Postal: ");
         int cp = sc.nextInt();
-        System.out.println("Ingrese Ciudad: ");
+        System.out.print("\nIngrese Ciudad: ");
         String ciudad = sc.next().toUpperCase();
 
         codigopostal.put(cp, ciudad);
+        System.out.println("\nCodigo ingresado correctamente");
         
     }
     
     public void eliminarCodigo(HashMap<Integer, String> codigopostal) {
-        System.out.println("Ingrese Codigo Postal: ");
+        System.out.print("\nIngrese Codigo Postal: \n");
         int cpel = sc.nextInt();
 
         if (codigopostal.containsKey(cpel)) {
             codigopostal.remove(cpel);
-            System.out.println("\nCodigo/Ciudad eliminado correctamente\n");
+            System.err.print("Codigo/Ciudad eliminado correctamente \n");
         } else {
-            System.err.println("\nEl Codigo no existe !!!! \n");
+            System.err.print("El Codigo no existe !!!! ");
         }
 }
     
@@ -80,15 +82,16 @@ public class CodigosPostales_service {
    public void ingresarDatos(HashMap<Integer, String> codigopostal) {
         boolean salir = true;
         do {
-            System.out.println("Ingrese Codigo Postal: ");
+            System.out.print("\nIngrese Codigo Postal: ");
             int cp = sc.nextInt();
-            System.out.println("Ingrese Ciudad: ");
+            System.out.print("\nIngrese Ciudad: ");
             String ciudad = sc.next().toUpperCase();
 
             codigopostal.put(cp, ciudad);
-            System.out.println("\nCodigo Postal => " + cp + "\nCiudad => "+ciudad);
+                        
+            System.out.print("\nCodigo Postal => " + cp + "\nCiudad => "+ciudad+"\n");
 
-            System.out.println("\nDesea seguir ingresando productos => (S/N) ");
+            System.out.print("\nDesea seguir ingresando productos => (S/N) "+"\n");
             String opc = sc.next();
 
             if (opc.equalsIgnoreCase("N")) {

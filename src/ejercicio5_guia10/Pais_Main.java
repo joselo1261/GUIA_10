@@ -11,7 +11,7 @@ public class Pais_Main {
         System.out.println("\t----- Crear Lista de Paises -----");
         ps.pedirPaises(paises);
         
-        System.out.println("\n\t----- Elimnar un Pais de la Lista -----");
+        System.out.println("\n\t----- Eliminar un Pais de la Lista -----");
         ps.eliminaPais(paises);
         
     }

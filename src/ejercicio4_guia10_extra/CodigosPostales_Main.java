@@ -24,22 +24,22 @@ public class CodigosPostales_Main {
             System.out.println("| 7. Salir                             |");
             System.out.println("|*------------------------------------*|");
             
-            System.out.print("\nIngrese una Opción: ");
+            System.out.print("Ingrese una Opción: ");
             int opc = sc.nextInt();
             System.out.println("");
             switch (opc) {
-                case 1: cp.ingresarDatos(codigopostal); break;
-                case 2: cp.buscarCodigo(codigopostal); break;
-                case 3: cp.agregarCodigo(codigopostal); break;
-                case 4: cp.eliminarCodigo(codigopostal);break;
-                case 5: cp.mostrarDatos(codigopostal); break;
-                case 6: cp.limpiar(1000); break;
+                case 1: cp.ingresarDatos(codigopostal); System.out.println(" ");break; 
+                case 2: cp.buscarCodigo(codigopostal); System.out.println(" ");break;
+                case 3: cp.agregarCodigo(codigopostal); System.out.println(" ");break;
+                case 4: cp.eliminarCodigo(codigopostal);System.out.println(" ");break;
+                case 5: cp.mostrarDatos(codigopostal); System.out.println(" ");break;
+                case 6: cp.limpiar(1000); System.out.println(" ");break;
                 case 7:
-                    System.err.println("Hasta la Proxima !!!!!!");
+                    System.err.print("Hasta la Proxima !!!!!! \n");
                     salir = false;
-                    System.out.println(""); break;
+                    System.out.print(""); break;
                 default:
-                    System.err.println("\nOpcion Incorrecta !!! Vuelva a intentarlo");
+                    System.err.print("Opcion Incorrecta !!! Vuelva a intentarlo");
                                              
             } 
             

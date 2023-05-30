@@ -63,20 +63,20 @@ public class Tienda_service {
             System.out.println("Ingrese el nuevo precio: ");
             double precio = sc.nextDouble();
             productos.put(nombre,precio);
-            System.out.println("Precio modificado correctamente.");
+            System.err.println("\nPrecio modificado correctamente\n");
         } else {
-            System.err.println("El producto no existe.");
+            System.err.println("\nEl producto no existe !!! \n");
         }
         
     }
     
-     public void eliminarProducto(HashMap<String, Double> productos) {
+     public void eliminarProducto(HashMap<String,Double> productos) {
         System.out.println("Ingrese el nombre del producto a eliminar: ");
         String nombre = sc.next().toUpperCase();
 
         if (productos.containsKey(nombre)) {
             productos.remove(nombre);
-            System.out.println("\nProducto eliminado correctamente\n");
+            System.err.println("\nProducto eliminado correctamente\n");
         } else {
             System.err.println("\nEl producto no existe !!!! \n");
         }
