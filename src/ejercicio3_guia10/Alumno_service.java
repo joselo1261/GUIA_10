@@ -65,5 +65,21 @@ import java.util.Scanner;
         }
         return -1;
     }
-
+        
+        // Metodo nota Final usando el for en lugar del iterator
+        public void notafinal2(String nombre){
+            for (Alumno alumno : alumnos) {
+            if (alumno.getNombre().equalsIgnoreCase(nombre)) {
+            double sum2 = 0;
+            for (int nota : alumno.getNotas()) {
+                sum2 += nota;
+            }
+           System.out.println("\nNota Final 2 => " + (sum2/alumno.getNotas().size())); 
+        }
+        
+    }
+             
+}
+   
+        
 }

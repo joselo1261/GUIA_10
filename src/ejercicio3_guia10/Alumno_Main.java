@@ -36,5 +36,15 @@ import java.util.Scanner;
             System.out.println("\nLa nota final de " + nombre + " es: " + notaFinal);
                 System.out.println(" ");
             }
+            
+        // Nota Final Metodo 2
+            System.out.println("Metodo 2 - Nota Final");
+            System.out.println("---------------------");
+            alumserv.notafinal2(nombre);  
+            System.out.println(" ");
+            
         }
-    } 
+    }
+    
+    
+  

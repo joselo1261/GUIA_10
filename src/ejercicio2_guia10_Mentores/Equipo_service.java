@@ -81,15 +81,17 @@ public class Equipo_service {
        
     public void imprimirTabla(ArrayList<Equipo> equipos){
         
-        System.out.printf("%-20s %-20s %-5s %-5s %-5s %-5s %-5s", "EQUIPO", "CIUDAD", "PJ", "PG", "PP", "PE","PT");
-        System.out.println("\n--------------------------------------------------------------------");
+        System.out.printf("%-3s %-20s %-20s %-5s %-5s %-5s %-5s %-5s", "#", "EQUIPO", "CIUDAD", "PJ", "PG", "PP", "PE","PT");
+        System.out.println("\n------------------------------------------------------------------------");
         
         equipos.forEach((Equipo equipo) -> {
-            System.out.printf("%-20s %-20s %-5s %-5s %-5s %-5s %-5s", equipo.getNombreEquipo(), equipo.getCiudad(),
+            int posic= equipos.indexOf(equipo); // Obtener la posicion en el Array de cada elemento
+            System.out.printf("%-3s %-20s %-20s %-5s %-5s %-5s %-5s %-5s",(posic+1),equipo.getNombreEquipo(), equipo.getCiudad(),
                     equipo.getCantidadPartidos(), equipo.getGanados(), equipo.getPerdidos(), equipo.getEmpatados(),
                     equipo.getPuntosTotales());
+            
             System.out.println("");
-        });
+            });
         
 }
      
