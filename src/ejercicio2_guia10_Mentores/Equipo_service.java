@@ -12,11 +12,11 @@ public class Equipo_service {
 
         System.out.println("Tabla de Posiciones Futbol Final Torneo");
         System.out.println("***************************************");
-        Equipo eq1 = new Equipo("Belgrano", "Cordoba", 7, 4, 2, 1, 13);
+        Equipo eq1 = new Equipo("Belgrano", "Cordoba", 7, 6, 0, 1, 19);
         Equipo eq2 = new Equipo("Talleres", "Cordoba", 7, 3, 3, 1, 10);
         Equipo eq3 = new Equipo("River", "Buenos Aires", 6, 5, 0, 1, 16);
         Equipo eq4 = new Equipo("Boca", "Buenos Aires", 6, 3, 2, 1, 10);
-        Equipo eq5 = new Equipo("San Martin", "San Juan", 7, 7, 0, 0, 21);
+        Equipo eq5 = new Equipo("San Martin", "San Juan", 7, 4, 3, 0, 12);
         Equipo eq6 = new Equipo("Huracan", "Buenos Aires", 7, 2, 3, 2, 8);
         Equipo eq7 = new Equipo("Colon", "Santa Fe", 7, 4, 2, 1, 13);
         Equipo eq8 = new Equipo("Union", "Santa Fe", 7, 2, 3, 2, 8);
