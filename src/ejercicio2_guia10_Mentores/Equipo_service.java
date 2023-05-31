@@ -81,16 +81,17 @@ public class Equipo_service {
        
     public void imprimirTabla(ArrayList<Equipo> equipos){
         
-        System.out.printf("%-3s %-20s %-20s %-5s %-5s %-5s %-5s %-5s", "#", "EQUIPO", "CIUDAD", "PJ", "PG", "PP", "PE","PT");
-        System.out.println("\n------------------------------------------------------------------------");
+        System.out.println("*******************************************************************************************");
+        System.out.printf("%-1s %-3s %-1s %-19s %-1s %-19s %-1s %5s %-1s %5s %-1s %5s %-1s %5s %-1s %5s %-1s","|","#","|", "EQUIPO","|", "CIUDAD", "|","PJ", "|","PG","|", "PP","|", "PE","|","PT","|");
+        System.out.println("\n*******************************************************************************************");
         
         equipos.forEach((Equipo equipo) -> {
             int posic= equipos.indexOf(equipo); // Obtener la posicion en el Array de cada elemento
-            System.out.printf("%-3s %-20s %-20s %-5s %-5s %-5s %-5s %-5s",(posic+1),equipo.getNombreEquipo(), equipo.getCiudad(),
-                    equipo.getCantidadPartidos(), equipo.getGanados(), equipo.getPerdidos(), equipo.getEmpatados(),
-                    equipo.getPuntosTotales());
+            System.out.printf("%-1s %-3s %-1s %-19s %-1s %-19s %-1s %5s %-1s %5s %-1s %5s %-1s %5s %-1s %5s %-1s","|",(posic+1),"|",equipo.getNombreEquipo(),"|", equipo.getCiudad(),
+                    "|",equipo.getCantidadPartidos(),"|", equipo.getGanados(), "|",equipo.getPerdidos(),"|", equipo.getEmpatados(),
+                    "|",equipo.getPuntosTotales(),"|");
             
-            System.out.println("");
+            System.out.println("\n-------------------------------------------------------------------------------------------");
             });
         
 }
