@@ -4,7 +4,6 @@ package ejercicio1_guia10_extra;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Numeros_Main {
 
     
